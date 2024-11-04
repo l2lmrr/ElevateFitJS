@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Update with Hover</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <nav id="nav">
+        <img src="images/logo-white.png" class="logo" alt="Logo">
+        
+        <ul class="menu-bar">
+            <!-- Total price display -->
+            <li id="total-price">&#36;0.00</li>
+
+            <!-- Cart icon with product count display -->
+            <li>
+                <i class="fas fa-shopping-cart"></i>
+                <span id="product-count">0</span>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<div class="product">
+    <img src="images/product-1.jpg" alt="Product Image">
+    <p id="product-price">$85.00</p>
+    <div class="hover-buttons">
+        <button onclick="addToCart()">Add to Cart</button>
+        <button onclick="viewDetails()">View Details</button>
+    </div>
+</div>
+
+<script>
+    // Initialize cart count and total price globally
+    let cartCount = 0;
+    let totalPrice = 0;
+
+    function addToCart() {
+        // Get the product price, removing any '$' symbol
+        const priceElement = document.getElementById('product-price');
+        if (priceElement) {
+            const price = parseFloat(priceElement.textContent.replace('$', ''));
+            
+            if (!isNaN(price)) { // Ensure price is a valid number
+                // Increment cart count and add price to total
+                cartCount++;
+                totalPrice += price;
+
+                // Update total price display in the menu bar
+                const totalPriceElement = document.getElementById("total-price");
+                if (totalPriceElement) {
+                    totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+                }
+
+                // Update cart count display near the cart icon
+                const cartCountDisplay = document.getElementById("product-count");
+                if (cartCountDisplay) {
+                    cartCountDisplay.textContent = cartCount;
+                }
+            } else {
+                console.error("Price is not a valid number.");
+            }
+        } else {
+            console.error("Element with ID 'product-price' not found.");
+        }
+    }
+
+    function viewDetails() {
+        // Placeholder for view details function
+        alert("Viewing product details!");
+    }
+</script>
+
+<style>
+    /* Styling for the hover effect */
+    .product {
+        position: relative;
+        width: 200px;
+    }
+    .hover-buttons {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 8px;
+    }
+    .product:hover .hover-buttons {
+        display: flex;
+    }
+</style>
+
+</body>
+</html>

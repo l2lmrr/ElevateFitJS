@@ -1,39 +1,73 @@
-/* style.css */
-body {
+  body {
     font-family: Arial, sans-serif;
   }
-  
+
   .cart-container {
     width: 80%;
-    margin: auto;
+    margin: 30px auto;
   }
-  
+
   table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
   }
-  
-  thead {
+
+  thead th {
     background-color: #FF5733;
     color: white;
-  }
-  
-  th, td {
-    padding: 10px;
     text-align: left;
+    padding: 10px;
   }
-  
+
+  thead th:nth-child(1) {
+    width: 50%; /* Aligns Product title with product content */
+  }
+
+  thead th:nth-child(2) {
+    width: 20%; /* Aligns Quantity title with input fields */
+    text-align: center;
+  }
+
+  thead th:nth-child(3) {
+    width: 20%; /* Aligns Subtotal title with prices */
+    text-align: right;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #ddd;
+  }
+
+  td {
+    padding: 15px 10px;
+    vertical-align: top;
+  }
+
   .product-details {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
-  
+
   .product-details img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
   }
-  
+
+  .product-details div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .remove-btn {
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 5px;
+  }
+
   .quantity-btn {
     background-color: #FF5733;
     color: white;
@@ -41,27 +75,39 @@ body {
     padding: 5px 10px;
     cursor: pointer;
   }
-  
+
   .quantity-input {
     width: 40px;
     text-align: center;
+    margin: 0 5px;
   }
-  
-  .remove-btn {
-    background-color: transparent;
-    color: #FF5733;
-    border: none;
-    cursor: pointer;
-    margin-top: 5px;
+
+  td:nth-child(2) {
+    text-align: center;
   }
-  
-  .cart-totals {
-    margin-top: 20px;
+
+  td:nth-child(3) {
     text-align: right;
+  }
+
+  .cart-totals {
+    border-top: 2px solid #FF5733;
+    padding-top: 10px;
+    max-width: 30%;
+    margin-left: auto;
   }
   
   .cart-totals p {
-    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
     margin: 5px 0;
+    font-size: 16px;
   }
-  
+
+  .cart-totals p:last-child {
+    font-weight: bold;
+  }
+
+  .cart-totals span {
+    text-align: right;
+  }

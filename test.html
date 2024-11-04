@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Order Form</title>
+    <link rel="stylesheet" href="css/detail.css">
+    <link rel="stylesheet" href="css/ProductOrders.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav id="nav">
+        <img src="images/logo-white.png" class="logo">
+        <ul class="menu-bar-side">
+            <li><a href="index.html" style="all: unset;">Home</a></li>
+            <li><a href="Products.html" style="all: unset;">Shop</a></li>
+            <li><a href="#" style="all: unset;">About</a></li>
+            <li><a href="#" style="all: unset;">Contact Us</a></li>
+        </ul>
+        <ul class="menu-bar">
+            <li id="total-price">&#36;0.00</li>
+            <li>
+                <i class="fas fa-shopping-cart"></i>
+                <span id="product-count" style="margin-left: 5px;">0</span>
+            </li>
+        </ul>
+        <i class="fa fa-bars"></i>
+    </nav>
+</header>
+
+  <!-- Title Section -->
+  <section class="title-section">
+    <h1>Product Order Form</h1>
+    <div class="underline"></div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      
+      <!-- Order Form -->
+      <form>
+        <div class="form-group">
+          <label>First Name *</label>
+          <input type="text" placeholder="First Name">
+        </div>
+        <div class="form-group">
+          <label>Last Name *</label>
+          <input type="text" placeholder="Last Name">
+        </div>
+        <div class="form-group">
+          <label>Company Name (Optional)</label>
+          <input type="text" placeholder="Company Name">
+        </div>
+        <div class="form-group">
+          <label>Country *</label>
+          <select>
+            <option value="Mexico">Mexico</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Spain">Spain</option>
+            <option value="Canada">Canada</option>
+            <option value="Germany">Germany</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Street Address *</label>
+          <input type="text" placeholder="Street Address" ><br>
+          <input type="text" placeholder="Apartment, suite, unit etc. (optional)">
+        </div>
+        <div class="form-group">
+          <label>Town / City *</label>
+          <input type="text" placeholder="Town / City">
+        </div>
+        <div class="form-group">
+          <label>State / County *</label>
+          <input type="text" placeholder="State / County">
+        </div>
+        <div class="form-group">
+          <label>Postcode / ZIP *</label>
+          <input type="text" placeholder="Postcode / ZIP">
+        </div>
+        <div class="form-group">
+          <label>Phone *</label>
+          <input type="text" placeholder="Phone">
+        </div>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" placeholder="Email Address">
+        </div>
+      </form>
+      
+      <!-- Order Summary -->
+      <div class="order-summary">
+        <div class="order-header">Your order</div>
+        <div class="order-details">
+            <div class="order-item">
+                <span>Product Name x 2 (Qty)</span>
+                <span class="price">$88.00</span>
+            </div>
+            <div class="order-item">
+                <span>Subtotal</span>
+                <span class="subtotal-price">$88.00</span>
+            </div>
+            <div class="order-item">
+                <span>Shipping</span>
+                <span class="free-shipping">Free shipping</span>
+            </div>
+            <div class="payment-method">
+                <label>
+                    <input type="radio" name="payment" value="bank-transfer" checked>
+                    Direct Bank Transfer
+                </label>
+                <p>Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.</p>
+                <label>
+                    <input type="radio" name="payment" value="cod">
+                    Cash on Delivery
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="paypal">
+                    PayPal
+                </label>
+            </div>
+            <button type="submit" class="place-order-btn">Place Order</button>
+          </div>
+    </div>
+
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download App for Android and iOS mobile phones.</p>
+                <div class="app-logo">
+                    <img src="images/play-store.png" alt="Play Store">
+                    <img src="images/app-store.png" alt="App Store">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="images/logo-white.png" alt="Company Logo">
+                <p>Our purpose is to sustainably make the pleasure and benefits of sports accessible to the many.</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog Post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col-4">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2024 - Made with ❤️ LorenzCipher</p>
+    </div>
+</footer>
+
+  <script src="js/script.js" defer></script>
+
+</body>
+</html>
