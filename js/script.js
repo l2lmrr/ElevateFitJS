@@ -299,3 +299,87 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 });
+
+
+//filter 
+
+// Assuming products array exists and has objects with price and category fields
+const products = [
+    { id: 'product-1', name: 'Red Printed T-shirt', price: 60.00, category: 'T-shirt', image: 'images/product-1.jpg', images: ['images/gallery-1.jpg'] },
+    { id: 'product-2', name: 'HRX Running Shoes', price: 41.00, category: 'Shoes', image: 'images/product-2.jpg', images: ['images/gallery-2.jpg'] },
+    { id: 'product-3', name: 'WEWOK Joggers', price: 18.00, category: 'Pants', image: 'images/product-3.jpg', images: ['images/gallery-3.jpg'] },
+    // Add more products as needed...
+];
+
+const categoryFilter = document.getElementById("category-filter");
+const priceRangeFilter = document.getElementById("price-range-filter");
+const priceRangeValue = document.getElementById("price-range-value");
+
+// Display initial price
+priceRangeFilter.addEventListener("input", function() {
+    priceRangeValue.textContent = `$${priceRangeFilter.value}`;
+});
+
+// Function to filter products by category and price
+function filterProducts() {
+    const selectedCategory = categoryFilter.value;
+    const maxPrice = parseFloat(priceRangeFilter.value); // Convert price to number
+
+    return products.filter(product => {
+        const isCategoryMatch = selectedCategory === "all" || product.category.toLowerCase() === selectedCategory.toLowerCase();
+        const isPriceMatch = parseFloat(product.price) <= maxPrice; // Ensure product price is a number
+        return isCategoryMatch && isPriceMatch;
+    });
+}
+
+// Event listeners for filter updates
+categoryFilter.addEventListener("change", updateDisplay);
+priceRangeFilter.addEventListener("input", updateDisplay);
+
+function updateDisplay() {
+    const filteredProducts = filterProducts();
+    console.log("Filtered products:", filteredProducts); // Check filtered output
+    displayProducts(filteredProducts);
+}
+
+// Function to display filtered products
+function displayProducts(filteredProducts) {
+    const productsContainer = document.querySelector(".row.row1");
+    productsContainer.innerHTML = ''; // Clear current display
+
+    filteredProducts.forEach(product => {
+        productsContainer.innerHTML += `
+            <div class="col-4">
+                <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="overlay">
+                        <button class="icon-btn" onclick="addToCart(${product.price}, '${product.id}', 1, '', '${product.image}', '${product.name}')">
+                            <i class="fa fa-shopping-cart"></i>
+                        </button>
+                        <button class="icon-btn" onclick="viewDetails({
+                            name: '${product.name}', 
+                            price: ${product.price}, 
+                            mainImage: '${product.image}', 
+                            images: ${JSON.stringify(product.images)},
+                            category: '${product.category}'
+                        })">
+                            <i class="fa fa-info-circle"></i>
+                        </button>
+                    </div>
+                </div>
+                <h4>${product.name}</h4>
+                <div class="rating">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                </div>
+                <p>$${product.price.toFixed(2)}</p>
+            </div>
+        `;
+    });
+}
+
+// Initial display
+displayProducts(products);

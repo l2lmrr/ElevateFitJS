@@ -57,15 +57,16 @@
 
 
             <div class="row row-2">
-                <h2>All Products
-
-                </h2>
-                <select>
-                    <option>Default Sorting</option>
-                    <option>Sort by Price</option>
-                    <option>Sort by Popularity</option>
-                    <option>Sort by Sale</option>
+                <h2>All Products</h2>
+                <select id="category-filter">
+                    <option value="all">Default Sorting</option>
+                    <option value="T-shirt">T-shirt</option>
+                    <option value="Shoes">Shoes</option>
+                    <option value="Pants">Pants</option>
+                    <option value="Watch">Watch</option>
                 </select>
+                <input type="range" id="price-range-filter" min="0" max="200" value="200" step="5">
+                <span id="price-range-value">$200</span>
             </div>
 
 
@@ -75,16 +76,16 @@
                 <div class="col-4">
                     <!-- Image container for hover effect -->
                     <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                        <img src="Images/product-1.jpg" alt="Red Printed T-shirt">
+                        <img src="images/product-1.jpg" alt="Red Printed T-shirt">
                             <div class="overlay">
-                                <button class="icon-btn" onclick="addToCart(60.00, 'product-1', 1, '', 'Images/product-1.jpg', 'Red Printed T-shirt')">
+                                <button class="icon-btn" onclick="addToCart(60.00, 'product-1', 1, '', 'images/product-1.jpg', 'Red Printed T-shirt')">
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </button>
                                 <button class="icon-btn" onclick="viewDetails({
                                     name: 'Red Printed T-Shirt', 
                                     price: 60.00, 
-                                    mainImage: 'Images/product-1.jpg', 
-                                    images: ['Images/gallery-1.jpg', 'Images/gallery-2.jpg', 'Images/gallery-3.jpg', 'Images/gallery-4.jpg']
+                                    mainImage: 'images/product-1.jpg', 
+                                    images: ['images/gallery-1.jpg', 'images/gallery-2.jpg', 'images/gallery-3.jpg', 'images/gallery-4.jpg']
                                 })">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                                 </button>
@@ -104,16 +105,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-2.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-2.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(41.00, 'product-2',  2, '', 'Images/product-2.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(41.00, 'product-2',  2, '', 'images/product-2.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'HRX by Hrithik Roshan', 
                         price: 41.00, 
-                        mainImage: 'Images/product-2.jpg', 
-                        images: ['Images/product-2.jpg', 'Images/product-2.jpg', 'Images/product-2.jpg', 'Images/product-2.jpg'],
+                        mainImage: 'images/product-2.jpg', 
+                        images: ['images/product-2.jpg', 'images/product-2.jpg', 'images/product-2.jpg', 'images/product-2.jpg'],
                         category: 'Running Shoes'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -134,16 +135,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-3.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-3.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(18.00, 'product-3', 3, '', 'Images/product-3.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(18.00, 'product-3', 3, '', 'images/product-3.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'WEWOK Men’s Super Combed Joggers', 
                         price: 18.00, 
-                        mainImage: 'Images/product-3.jpg', 
-                        images: ['Images/product-3.jpg', 'Images/product-3.jpg', 'Images/product-3.jpg', 'Images/product-3.jpg'],
+                        mainImage: 'images/product-3.jpg', 
+                        images: ['images/product-3.jpg', 'images/product-3.jpg', 'images/product-3.jpg', 'images/product-3.jpg'],
                         category: 'Mens pants'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -164,16 +165,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-4.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-4.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(24.00, 'product-4', 1, '', 'Images/product-4.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(24.00, 'product-4', 1, '', 'images/product-4.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'Puma ESS Mens Pique Polo', 
                         price: 24.00, 
-                        mainImage: 'Images/product-4.jpg', 
-                        images: ['Images/product-4.jpg', 'Images/product-4.jpg', 'Images/product-4.jpg', 'Images/product-4.jpg'],
+                        mainImage: 'images/product-4.jpg', 
+                        images: ['images/product-4.jpg', 'images/product-4.jpg', 'images/product-4.jpg', 'images/product-4.jpg'],
                         category: 'T-shirts'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -200,16 +201,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-5.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-5.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(100.00, 'product-5', 1, '', 'Images/product-5.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(100.00, 'product-5', 1, '', 'images/product-5.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'HRX by Hrithik Roshan', 
                         price: 100.00, 
-                        mainImage: 'Images/product-5.jpg', 
-                        images: ['Images/product-5.jpg', 'Images/product-5.jpg', 'Images/product-5.jpg', 'Images/product-5.jpg'],
+                        mainImage: 'images/product-5.jpg', 
+                        images: ['images/product-5.jpg', 'images/product-5.jpg', 'images/product-5.jpg', 'images/product-5.jpg'],
                         category: 'Men Shoes'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -230,16 +231,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-6.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-6.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(37.00, 'product-6', 1, '', 'Images/product-6.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(37.00, 'product-6', 1, '', 'images/product-6.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'HRX by Hrithik Roshan', 
                         price: 37.00, 
-                        mainImage: 'Images/product-6.jpg', 
-                        images: ['Images/product-6.jpg', 'Images/product-6.jpg', 'Images/product-6.jpg', 'Images/product-6.jpg'],
+                        mainImage: 'images/product-6.jpg', 
+                        images: ['images/product-6.jpg', 'images/product-6.jpg', 'images/product-6.jpg', 'images/product-6.jpg'],
                         category: 'Men Shoes'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -259,16 +260,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-7.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-7.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(10.00, 'product-7', 1, '', 'Images/product-7.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(10.00, 'product-7', 1, '', 'images/product-7.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'HRX by Hrithik Roshan', 
                         price: 10.00, 
-                        mainImage: 'Images/product-7.jpg', 
-                        images: ['Images/product-7.jpg', 'Images/product-7.jpg', 'Images/product-7.jpg', 'Images/product-7.jpg'],
+                        mainImage: 'images/product-7.jpg', 
+                        images: ['images/product-7.jpg', 'images/product-7.jpg', 'images/product-7.jpg', 'images/product-7.jpg'],
                         category: 'Men Shoes'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -290,14 +291,14 @@
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
                 <img src="Images/product-8.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(56.00, 'product-8', 1, '', 'Images/product-8.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(56.00, 'product-8', 1, '', 'images/product-8.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'HRX by Hrithik Roshan', 
                         price: 56.00, 
-                        mainImage: 'Images/product-8.jpg', 
-                        images: ['Images/product-8.jpg', 'Images/product-8.jpg', 'Images/product-8.jpg', 'Images/product-8.jpg'],
+                        mainImage: 'images/product-8.jpg', 
+                        images: ['images/product-8.jpg', 'images/product-8.jpg', 'images/product-8.jpg', 'images/product-8.jpg'],
                         category: 'Men Shoes'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -319,16 +320,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-9.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-9.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(67.00, 'product-9', 1, '', 'Images/product-9.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(67.00, 'product-9', 1, '', 'images/product-9.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'HRX by Hrithik Roshan', 
                         price: 67.00, 
                         mainImage: 'Images/product-9.jpg', 
-                        images: ['Images/product-9.jpg', 'Images/product-9.jpg', 'Images/product-9.jpg', 'Images/product-9.jpg'],
+                        images: ['images/product-9.jpg', 'images/product-9.jpg', 'images/product-9.jpg', 'images/product-9.jpg'],
                         category: 'Men Shoes'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -348,16 +349,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-10.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-10.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(50.00, 'product-10', 1, '', 'Images/product-10.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(50.00, 'product-10', 1, '', 'images/product-10.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'HRX by Hrithik Roshan', 
                         price: 50.00, 
-                        mainImage: 'Images/product-10.jpg', 
-                        images: ['Images/product-10.jpg', 'Images/product-10.jpg', 'Images/product-10.jpg', 'Images/product-10.jpg'],
+                        mainImage: 'images/product-10.jpg', 
+                        images: ['images/product-10.jpg', 'images/product-10.jpg', 'images/product-10.jpg', 'images/product-10.jpg'],
                         category: 'Men Shoes'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -377,16 +378,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-11.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-11.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(22.00, 'product-11', 1, '', 'Images/product-11.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(22.00, 'product-11', 1, '', 'images/product-11.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'HRX by Hrithik Roshan', 
                         price: 22.00, 
-                        mainImage: 'Images/product-11.jpg', 
-                        images: ['Images/product-11.jpg', 'Images/product-11.jpg', 'Images/product-11.jpg', 'Images/product-11.jpg'],
+                        mainImage: 'images/product-11.jpg', 
+                        images: ['images/product-11.jpg', 'images/product-11.jpg', 'images/product-11.jpg', 'images/product-11.jpg'],
                         category: 'Men Shoes'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
@@ -406,16 +407,16 @@
                 <div class="col-4">
             <!-- Image container for hover effect -->
             <div class="image-container" onmouseover="showOverlay(this)" onmouseout="hideOverlay(this)">
-                <img src="Images/product-12.jpg" alt="Red Printed T-shirt">
+                <img src="images/product-12.jpg" alt="Red Printed T-shirt">
                 <div class="overlay">
-                    <button class="icon-btn" onclick="addToCart(30.00, 'product-12', 1, '', 'Images/product-12.jpg', 'Red Printed T-shirt')">
+                    <button class="icon-btn" onclick="addToCart(30.00, 'product-12', 1, '', 'images/product-12.jpg', 'Red Printed T-shirt')">
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </button>
                     <button class="icon-btn" onclick="viewDetails({
                         name: 'HRX by Hrithik Roshan', 
                         price: 30.00, 
-                        mainImage: 'Images/product-12.jpg', 
-                        images: ['Images/product-12.jpg', 'Images/product-12.jpg', 'Images/product-12.jpg', 'Images/product-12.jpg'],
+                        mainImage: 'images/product-12.jpg', 
+                        images: ['images/product-12.jpg', 'images/product-12.jpg', 'images/product-12.jpg', 'images/product-12.jpg'],
                         category: 'Men Shoes'
                     })">
                         <i class="fa fa-info-circle" aria-hidden="true"></i>
